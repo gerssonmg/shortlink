@@ -52,7 +52,7 @@ const Form = () => {
     };
 
     const handleCopy = () => {
-        if (shortUrl) {
+          if (shortUrl) {
           navigator.clipboard.writeText(shortUrl);
           alert(`URL copiada: ${shortUrl}`);
         }
@@ -85,7 +85,7 @@ const Form = () => {
 
     {shortUrl && (
         <div style={{ marginTop: '40px' }}>
-        <hr/>
+          <hr/>
           <p style={{margin: "0"}}>URL encurtada</p>
           <p style={{margin: "0"}}>click para copiar</p>
           <div

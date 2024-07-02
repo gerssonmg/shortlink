@@ -19,7 +19,7 @@ function Copyright() {
         Gérson Aguiar - YT: dev.gersonaguiar
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
+      {'.v0.0.19'}
     </Typography>
   );
 }

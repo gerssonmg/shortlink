@@ -18,15 +18,11 @@ const Form = () => {
 
     const [url, setUrl] = useState("");
   
-  
-    
-  
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
   
   
       const db = getDatabase();
-  
       const eventRef = ref(db, 'events/' + Date.now());
       set(eventRef, {
         t: "title",
@@ -37,8 +33,6 @@ const Form = () => {
           alert('Erro ao criar URL');
         });
       
-  
-  
       if (url) {
         const shortUrlKey = generateShortUrl();
         const shortUrl = `https://short.ly/${shortUrlKey}`;
@@ -68,8 +62,9 @@ const Form = () => {
         onChange={(e) => setUrl(e.target.value)}
         placeholder="Insira a URL"
         required
+        style={{ padding: '10px', fontSize: '16px', marginBottom: "12px" }}
         />
-
+        
           <button type="submit">Encurtar URL</button>
     </Box>
   </form>

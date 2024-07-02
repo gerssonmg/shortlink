@@ -1,10 +1,7 @@
-// src/components/RedirectToOriginalUrl.tsx
-
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDatabase, ref, get } from 'firebase/database';
 import CircularProgress from '@mui/material/CircularProgress';
-
 
 const Redirect = () => {
   const { shortUrl } = useParams<{ shortUrl: string }>();
@@ -30,7 +27,7 @@ const Redirect = () => {
         fetchOriginalUrl();
   }, [shortUrl]);
 
-  return       <CircularProgress color="success" />  ;
+  return <CircularProgress color="success" />  ;
 };
 
 export default Redirect;

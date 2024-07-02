@@ -20,5 +20,4 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const analytics = getAnalytics(app);

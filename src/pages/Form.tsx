@@ -22,19 +22,19 @@ const Form = () => {
   
   
       const db = getDatabase();
-      const eventRef = ref(db, 'events/' + Date.now());
-      set(eventRef, {
-        t: "title",
-      })      .then(() => {
-                alert('Evento cadastrado com sucesso!');
-              })
-        .catch(() => {
-          alert('Erro ao criar URL');
-        });
+      // const eventRef = ref(db, 'events/' + Date.now());
+      // set(eventRef, {
+      //   t: "title",
+      // })      .then(() => {
+      //           alert('Evento cadastrado com sucesso!');
+      //         })
+      //   .catch(() => {
+      //     alert('Erro ao criar URL');
+      //   });
       
       if (url) {
         const shortUrlKey = generateShortUrl();
-        const shortUrl = `https://short.ly/${shortUrlKey}`;
+        const shortUrl = `https://shortlink-86962.web.app/${shortUrlKey}`;
   
         try {
           await set(ref(db, 'shortlinks/' + shortUrlKey), {
